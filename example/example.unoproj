@@ -1,0 +1,13 @@
+{
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Projects": [
+    "../src/fuse-bodymovin.unoproj"
+  ],
+  "Includes": [
+    "*.ux:UX",
+    "Assets/*.json:Bundle"
+  ]
+}
