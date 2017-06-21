@@ -144,7 +144,12 @@ public partial class BodyMovin
 		if (size.Keyframes != null)
 			debug_log "WARNING: animated size on ellipse, not supported yet!";
 
-		var ellipse = (size.Keyframes == null && size.InitialValues[0] == size.InitialValues[1]) ? (Shape)new Circle() : new Ellipse();
+		Shape ellipse;
+		if (size.Keyframes == null && size.InitialValues[0] == size.InitialValues[1]) 
+			ellipse = new Circle();
+		else
+			ellipse = new Ellipse();
+
 		// TODO: position
 		ellipse.Width = size.InitialValues[0];
 		ellipse.Height = size.InitialValues[1];
